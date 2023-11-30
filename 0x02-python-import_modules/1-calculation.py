@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 This module imports functions from calculator_1.py, performs some calculations, and prints the results.
 """
