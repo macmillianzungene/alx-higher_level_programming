@@ -1,12 +1,21 @@
 #!/usr/bin/python3
+"""
+This is the "my_module" module.
+
+The my_module module defines the Square class.
+"""
+
 class Square:
-    """This class defines a square with a private instance attribute size."""
-
+    """
+    This is the Square class.
+    
+    The Square class defines a square with a private instance attribute size.
+    """
     def __init__(self, size):
-        """Initialize the Square instance with size.
-
-        Args:
-            size: Size of the square.
+        """
+        This is the constructor for Square class.
+        
+        The constructor instantiates a Square object with a given size.
         """
         self.__size = size
 
