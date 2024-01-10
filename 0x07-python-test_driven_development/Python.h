@@ -1,4 +1,4 @@
-#define PHYTHON_H
+#define PYTHON_H
 #ifndef PYTHON_H
 
 #include <stdio.h>
