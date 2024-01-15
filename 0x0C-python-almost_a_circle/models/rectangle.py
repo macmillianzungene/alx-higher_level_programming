@@ -3,7 +3,6 @@
 
 from models.base import Base
 
-
 class Rectangle(Base):
     """Rectangle class that inherits from Base"""
 
@@ -77,6 +76,9 @@ class Rectangle(Base):
 
     def display(self):
         """Prints in stdout the Rectangle instance with the character #"""
-        for _ in range(self.__height):
-            print("#" * self.__width)
+        print('\n'.join(['#' * self.__width for _ in range(self.__height)]))
+
+    def __str__(self):
+        """Returns a string representation of the Rectangle instance"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
