@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 """
 This module contains the Base class.
 """
@@ -11,14 +12,21 @@ class Base:
 
     def __init__(self, id=None):
         """
-        This is the constructor of the Base class.
-
-        Args:
-            id (int, optional): The id of the Base instance. Defaults to None.
+        Constructor for the Base class.
         """
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        Returns the JSON string representation of list_dictionaries.
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
 
